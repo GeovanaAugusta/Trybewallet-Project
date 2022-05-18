@@ -7,13 +7,14 @@ export class Forms extends Component {
   async componentDidMount() {
     const { getFetchAPI } = this.props;
     await getFetchAPI();
-    console.log(getFetchAPI); // OK
+    // console.log(getFetchAPI); // OK
   }
 
   render() {
     const { currencies } = this.props;
+    // console.log(currencies); // Certo, as 15 moedas
 
-    console.log(currencies); // Certo, as 15 moedas
+    const tagArray = ['Alimentação', 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
 
     return (
       <form>
@@ -38,7 +39,11 @@ export class Forms extends Component {
         <label htmlFor="currencies">
           Moeda:
           <select id="currencies">
-            <option>x</option>
+            { currencies.map((currency, index) => (
+              <option key={ index }>
+                {currency}
+              </option>
+            ))}
           </select>
         </label>
 
@@ -60,11 +65,11 @@ export class Forms extends Component {
             id="category"
             data-testid="tag-input"
           >
-            <option>Alimentação</option>
-            <option>Lazer</option>
-            <option>Trabalho</option>
-            <option>Transporte</option>
-            <option>Saúde</option>
+            { tagArray.map((tag, index) => (
+              <option key={ index }>
+                {tag}
+              </option>
+            ))}
           </select>
         </label>
 
