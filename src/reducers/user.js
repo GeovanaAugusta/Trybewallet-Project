@@ -1,11 +1,9 @@
 // Esse reducer será responsável por tratar as informações da pessoa usuária
 const INITIAL_STATE_USER = {
-  user: {
-    email: '',
-  },
+  email: '',
 };
 
-const user = (state = INITIAL_STATE_USER, action) => {
+const userReducer = (state = INITIAL_STATE_USER, action) => {
   switch (action.type) {
   case 'CHANGE_EMAIL':
     return { ...state, email: action.payload };
@@ -13,4 +11,7 @@ const user = (state = INITIAL_STATE_USER, action) => {
     return state;
   }
 };
-export default user;
+
+export default userReducer;
+
+// Usando a chave user aqui no estado inicial, duplicava após a leitura das informações da store pelo user.email (mapState...)

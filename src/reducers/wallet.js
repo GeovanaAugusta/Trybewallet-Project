@@ -6,7 +6,7 @@ const INITIAL_STATE_WALLET = {
   },
 };
 
-const wallet = (state = INITIAL_STATE_WALLET, action) => {
+const walletReducer = (state = INITIAL_STATE_WALLET, action) => {
   switch (action.type) {
   case 'GET_CURRENCIES':
     return { ...state, curencies: action.payload };
@@ -16,4 +16,5 @@ const wallet = (state = INITIAL_STATE_WALLET, action) => {
     return state;
   }
 };
-export default wallet;
+
+export default walletReducer;
