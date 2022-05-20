@@ -10,10 +10,10 @@ export class Header extends Component {
     // Preciso do value acumulado, a partir disso preciso multiplicar esse value em função da cotação e sempre somando com a multiplicação dos próximos - reduce
     // Percebi que o code da exchangeRates é = ao currency
 
-    const getTotalExpenses = expenses.map((element) => (
-      { value: element.value,
-        currency: element.currency,
-        exchangeRates: element.exchangeRates }
+    const getTotalExpenses = expenses.map((expense) => (
+      { value: expense.value,
+        currency: expense.currency,
+        exchangeRates: expense.exchangeRates }
     ))
       .reduce((accumulator, currentValue) => {
         const currencies = Object.values(currentValue.exchangeRates)
