@@ -24,6 +24,18 @@ export const saveExpenses = (expenses) => ({
   payload: expenses,
 });
 
+export const fetchAPICot = (expenses) => async (dispatch) => {
+  try {
+    const response = await fetch('https://economia.awesomeapi.com.br/json/all');
+    const result = await response.json();
+    const objectRequired = { ...expenses, exchangeRates: result };
+    // console.log(objectRequired);
+    dispatch(saveExpenses(objectRequired));
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 // REQUISITO 4
 // SOURCE
 // Mentoria da excepcional Luá, com código presente aqui: https://github.com/luacomacento/booksapi-redux/blob/main/src/redux/actions/index.js
