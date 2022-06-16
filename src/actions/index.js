@@ -41,6 +41,11 @@ export const removeAnExpense = (expenseID) => ({
   payload: expenseID,
 });
 
+export const updatetAllExpenses = (finalExpenses) => ({
+  type: 'EDIT_AN_EXPENSE',
+  payload: finalExpenses,
+});
+
 // REQUISITO 4
 // SOURCE
 // Mentoria da excepcional Luá, com código presente aqui: https://github.com/luacomacento/booksapi-redux/blob/main/src/redux/actions/index.js

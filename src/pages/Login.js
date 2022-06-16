@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { saveUserEmail } from '../actions/index';
+import { Img, Input, Div, Button } from '../CSS/login';
+import Wallet from '../images/wallet4.jpg';
 
 class Login extends React.Component {
   constructor(props) {
@@ -44,42 +46,41 @@ class Login extends React.Component {
   render() {
     const { email, password, isDisabled } = this.state;
     return (
-      <div>
-        <h1>Login</h1>
+      <Div>
+        {/* <h1>Login</h1> */}
+        <h1 className="trybewallet">TrybeWallet</h1>
         <form>
-          <label htmlFor="email">
-            <input
-              data-testid="email-input"
-              id="email"
-              type="email"
-              placeholder="Email"
-              name="email"
-              value={ email }
-              onChange={ this.handleChange }
-            />
-          </label>
+          <Img src={ Wallet } alt="wallet cartoon" />
 
-          <label htmlFor="password">
-            <input
-              data-testid="password-input"
-              id="password"
-              type="password"
-              placeholder="Senha"
-              name="password"
-              value={ password }
-              onChange={ this.handleChange }
-            />
-          </label>
+          <Input
+            data-testid="email-input"
+            id="email"
+            type="email"
+            placeholder="Email"
+            name="email"
+            value={ email }
+            onChange={ this.handleChange }
+          />
+          <br />
+          <Input
+            data-testid="password-input"
+            id="password"
+            type="password"
+            placeholder="Senha"
+            name="password"
+            value={ password }
+            onChange={ this.handleChange }
+          />
 
-          <button
+          <Button
             type="button"
             onClick={ this.handleClick }
             disabled={ isDisabled }
           >
             Entrar
-          </button>
+          </Button>
         </form>
-      </div>
+      </Div>
     );
   }
 }
