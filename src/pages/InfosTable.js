@@ -8,7 +8,7 @@ import { Button, Button2, Button3 } from '../CSS/infosTable';
 export class InfosTable extends Component {
   render() {
     const { expenses, getRemoveAnExpense, handleClickEdit, editButtonEdit } = this.props;
-    // console.log(expenses);
+    // console.log(expenses );
     return (
       <table>
         <Table />
