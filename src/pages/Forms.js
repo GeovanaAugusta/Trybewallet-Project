@@ -7,7 +7,7 @@ import InfosTable from './InfosTable';
 
 const food = 'Alimentação';
 
-export class Forms extends Component {
+class Forms extends Component {
   constructor(props) {
     super(props);
     this.state = {

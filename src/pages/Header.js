@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Div } from '../CSS/header';
 
-export class Header extends Component {
+class Header extends Component {
   render() {
     const { email, expenses } = this.props;
     // console.log(expenses);

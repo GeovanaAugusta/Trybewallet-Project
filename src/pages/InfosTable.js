@@ -5,7 +5,7 @@ import { removeAnExpense } from '../actions';
 import Table from './Table';
 import { Button, Button2, Button3 } from '../CSS/infosTable';
 
-export class InfosTable extends Component {
+class InfosTable extends Component {
   render() {
     const { expenses, getRemoveAnExpense, handleClickEdit, editButtonEdit } = this.props;
     // console.log(expenses );
