@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeAnExpense } from '../actions';
 import Table from './Table';
-import { Button, Button2 } from '../CSS/infosTable';
+import { Button, Button2, Button3 } from '../CSS/infosTable';
 
 export class InfosTable extends Component {
   render() {
@@ -36,14 +36,14 @@ export class InfosTable extends Component {
               <td>Real</td>
               <td>
                 { editButtonEdit ? (
-                  <Button2
+                  <Button3
                     type="button"
                     data-testid="edit-btn"
                     onClick={ () => handleClickEdit(expense.id,
                       expense.exchangeRates) }
                   >
                     Editado
-                  </Button2>
+                  </Button3>
                 ) : (
                   <Button2
                     type="button"
