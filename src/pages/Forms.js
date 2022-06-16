@@ -161,7 +161,7 @@ export class Forms extends Component {
             </Select>
           </label>
 
-          {/* <label htmlFor="method"> */}
+          {/* <label htmlFor="method">  */}
           Método de pagamento
           <Select
             id="method"
