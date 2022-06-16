@@ -174,7 +174,7 @@ export class Forms extends Component {
             <option value="Cartão de crédito">Cartão de crédito</option>
             <option value="Cartão de débito">Cartão de débito</option>
           </Select>
-          {/* </label> */}
+          {/* </label>  */}
 
           <label htmlFor="category">
             Tag
