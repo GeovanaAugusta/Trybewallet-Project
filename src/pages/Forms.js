@@ -28,7 +28,6 @@ class Forms extends Component {
   async componentDidMount() {
     const { getFetchAPI } = this.props;
     await getFetchAPI();
-    // console.log(getFetchAPI); // OK
   }
 
   handleChange = ({ target }) => {
@@ -161,7 +160,6 @@ class Forms extends Component {
             </Select>
           </label>
 
-          {/* <label htmlFor="method">  */}
           Método de pagamento
           <Select
             id="method"
@@ -174,7 +172,6 @@ class Forms extends Component {
             <option value="Cartão de crédito">Cartão de crédito</option>
             <option value="Cartão de débito">Cartão de débito</option>
           </Select>
-          {/* </label>  */}
 
           <label htmlFor="category">
             Tag
@@ -237,13 +234,3 @@ Forms.propTypes = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Forms);
-
-// SOURCES
-// REQUISITO 4
-// Para enviar as informações para a store precisava usar o mapDispatchToProps, só fazendo a action o teste não ia, como Forms não tem um botão ou algo pra vincular a chamada da API, o didMount veio em mente e na aula do grande Jensen (15.) já havia sido mencionado, procurando na minutagem 47:13 fica claro ser o melhor lugar para receber uma API nesse contexto
-// redux-thunk 15.4 peguei essa estrutura de base
-// const mapDispatchToProps = (dispatch) => ({
-// getImage: () => dispatch(fetchAPI()),
-// });
-// Requisito 6
-// Relembrar é viver 43 https://stackoverflow.com/questions/42364838/incrementing-state-value-by-one-using-react

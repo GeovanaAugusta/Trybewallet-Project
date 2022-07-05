@@ -8,7 +8,6 @@ import { Button, Button2, Button3 } from '../CSS/infosTable';
 class InfosTable extends Component {
   render() {
     const { expenses, getRemoveAnExpense, handleClickEdit, editButtonEdit } = this.props;
-    // console.log(expenses );
     return (
       <table>
         <Table />
@@ -62,17 +61,6 @@ class InfosTable extends Component {
                   Excluir
                 </Button>
               </td>
-
-              {/* <td>
-              <button
-                type="button"
-                data-testid="edit-btn"
-                onClick={ () => getEditAnExpense(expense.id) }
-              >
-                Editar
-              </button>
-            </td> */}
-
             </tr>
           ))}
         </tbody>
@@ -97,16 +85,3 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(InfosTable);
-
-// REQUISITO 8
-// Douglas me relembrou o uso da outra forma de acesso de objetos que é a Notação de colchete, foi uma aula!
-// Aí pesquisei mais nesses links:
-// https://imasters.com.br/desenvolvimento/o-poder-dos-colchetes-no-javascript
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Property_Accessors
-
-// REQUISITO 9
-// 3, como cada item tem uma key única que é o id, então é a partir dele que faço o filter para remover do estado, outro ponto do filter é que como o state é imutável, só posso usar métodos de clonagem (como o filter) e de mutação nem pensar! https://stackoverflow.com/questions/60602801/how-to-update-the-global-state-using-redux-and-remove-an-item-from-the-global-st
-// 13 https://stackoverflow.com/questions/57519905/how-delete-item-from-redux-state
-
-// REQUISITO 10
-// Entendo que preciso de duas ações, uma de clicar para editar e outra de atribuir as alterações pra finalizar a edição

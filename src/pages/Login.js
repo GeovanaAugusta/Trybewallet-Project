@@ -47,7 +47,6 @@ class Login extends React.Component {
     const { email, password, isDisabled } = this.state;
     return (
       <Div>
-        {/* <h1>Login</h1> */}
         <h1 className="trybewallet">TrybeWallet</h1>
         <form>
           <Img src={ Wallet } alt="wallet cartoon" />
@@ -95,8 +94,3 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(null, mapDispatchToProps)(Login);
-
-// REQUISITO 1
-// SOURCE
-// regex e validação: arquivo Checkout do meu projeto em grupo FrontEnd Online Store
-// https://github.com/tryber/sd-020-a-project-frontend-online-store/commit/5b94b068e1fd3364a9f937aeb3c6d802f544af72

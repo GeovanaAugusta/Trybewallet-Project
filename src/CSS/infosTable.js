@@ -32,8 +32,8 @@ justify-content: center;
 align-items: center;
 font-family: sans serif;
 color: #FFFFFF;
-background-color: green;
-border: 1px solid green;
+background-color: #193E1B;
+border: 1px solid #193E1B;
 `;
 
 const Div = styled.div`
