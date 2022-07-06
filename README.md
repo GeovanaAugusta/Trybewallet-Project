@@ -19,7 +19,7 @@ A aplicação foi desenvolvida em React usando o Redux como ferramenta de manipu
 
 - Criação de actions assíncronas;
 
-- Criação rotas com React Router Dom;
+- Criação de rotas com React Router Dom;
 
 - Requisição à API;
 
