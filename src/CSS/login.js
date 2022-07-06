@@ -20,17 +20,19 @@ margin-bottom: 95px;
 `;
 
 const Div = styled.div`
-position: relative;
 width: 570px;
 height: 404px;
-left: 372px;
-top: 101px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 background: #446e51;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.65);
 border-radius: 15px;
 `;
 
 const Img = styled.img`
+position: relative;
 width: 130px;
 height: 110px;
 background: #023031;
@@ -40,6 +42,7 @@ margin-left: 220px;
 `;
 
 const Button = styled.button`
+position: relative;
 display: flex;
 font-size: 20px;
 flex-direction: column;
