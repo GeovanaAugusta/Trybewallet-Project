@@ -21,9 +21,9 @@ A aplicação foi desenvolvida em React usando o Redux como ferramenta de manipu
 
 - Criação de rotas com React Router Dom;
 
-- Requisição à API;
+- Requisição à API.
 
 
-## Hospedagem
+## Deploy
 
 _[Projeto - Trybewallet](https://trybewallet-project-front-end-geovanaaugusta.vercel.app//)_
